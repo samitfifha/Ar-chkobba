@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 63f54d6176aee69479115c69caedfdc4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - userNameField: {instanceID: 0}
+  - passwordField: {instanceID: 0}
+  - loginButton: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -11,6 +11,12 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    //name of the scene you want to load
+    public void ConnectToServer()
+    {
+        SceneManager.LoadScene("Login Scene");
+    }
+
   public void gotooptionchange()
     {
         SceneManager.LoadScene("Setting scene");   

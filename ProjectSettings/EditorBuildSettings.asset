@@ -8,10 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu scene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/Game scene.unity
-    guid: d26f6b7a0896d0748a1e9d9664e6aa52
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Setting scene.unity
     guid: bb206ad8942fded4fa5ad5e6990dd55c
+  - enabled: 1
+    path: Assets/Scenes/Game scene.unity
+    guid: 973ac30436e4d344088a9220d3d008cf
+  - enabled: 1
+    path: Assets/Scenes/Login Scene.unity
+    guid: b11e08a4c9beb2a4c9500078370f3787
+  - enabled: 1
+    path: Assets/Scenes/New Match Scene.unity
+    guid: c8bdf263c4b71fc4cbcc6c2890ef67bb
   m_configObjects: {}
