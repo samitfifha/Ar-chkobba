@@ -26,16 +26,16 @@ public class Singleton : MonoBehaviour
 
 
     //each time a new player logs in or logs out, update the players list
-    public bool updatePlayers() {
+    public void updatePlayers() {
         socket.OnMessage += (sender, e) => {
             string response = e.Data;
             JObject jsonResponse = JObject.Parse(response);
             string control = jsonResponse["control"].ToString();
             if (control == "players") {
                 SharedResources.players = (JArray) jsonResponse["data"];
+                SharedResources.playersUpdated = true;
             }
         };
-        return true;
     }
 
 

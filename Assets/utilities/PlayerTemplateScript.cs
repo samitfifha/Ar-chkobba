@@ -11,42 +11,51 @@ public class PlayerTemplateScript : MonoBehaviour
    
 {
 
-    [SerializeField] private Image background;
-    [SerializeField] private TMP_Text playerName;
+    [SerializeField] private Button playerButton;
 
 
     public void SetPlayer(JObject player)
     {
-        playerName.text = player["username"].ToString();
+        //set the player's name in the text label
+        playerButton.GetComponentInChildren<TMP_Text>().text = player["username"].ToString();
         if (player["status"].ToString() == "available") {
-            background.color = Color.green;
+            //set button color to green
+            playerButton.interactable = true;
+            playerButton.image.color = Color.green;
+            
         }
         else {
-            background.color = Color.red;
+            playerButton.image.color = Color.red;
+            //make button unclickable
+            playerButton.interactable = false;
         }
     }
 
 
     public string getPlayerName() {
-        // return playerName.text;
-        return playerName.text;
+        // return 
+        return playerButton.GetComponentInChildren<TMP_Text>().text.ToString();
     }
     
-    public string getPlayerStatus() {
-        // return playerName.text;
-        return background.color.ToString();
-    }
+   
 
     //when the item is clicked change the color of the background and the text
     public void test()
     {
-        if (background.color == Color.green) {
-            //navigate to Login Scene
-            SceneManager.LoadScene("Login Scene");
-           
-        }
-        else {
-           
-        }
+        //change the button color to blue
+        playerButton.image.color = Color.blue;
+    }
+    
+    void Start()
+    {
+        //on click, change the color of the button to blue
+        playerButton.onClick.AddListener(test);
+        
+    }
+    void Update()
+    {
+        //on click, change the color of the button to blue
+        playerButton.onClick.AddListener(test);
+        
     }
 }
