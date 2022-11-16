@@ -12,5 +12,7 @@ namespace Assets
         public static JArray players { get; set; }
         public static string selectedPlayer { get; set; }
         public static bool playersUpdated = false;
+        public static bool matchProposalUpdated = false;
+        public static JObject matchProposal { get; set; }
     }
 }
